@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive;
+*/
+
+:root{
+    --primary-font: 'Montserrat', sans-serif;
+    --header-font: 'Permanent Marker', cursive;
+    --primary-fontColor: rgb(247, 123, 0);
+    --secondary-fontColor: rgb(97, 97, 97);
+    --deco-primaryColor: rgb(240, 140, 41);
+    --deco-secondaryColor: rgb(102, 101, 101);
+    --background-color: rgb(255,255,255);
+
+}
+/*General Settings*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--primary-font); 
+    color: var(--secondary-fontColor);
+    max-width: 100%;
+    width: 100%;
+    font-weight: 400;
+}
+
+h1, strong{
+    font-family: var(--header-font);
+    color: var(--primary-fontColor);
+}
+img{max-width: 100%;}
+
+a{
+    text-decoration: none;
+    color: var(--secondary-fontColor);
+}
+
+.bg-Overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1b5b6b41;
+    z-index: -1000;
+}
+
+
+/*Navigation Settings*/
+
+.navContainer-Desktop{
+    display: none;
+}
+
+.navContainer-Mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navWrapper-Mobile{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    color: var(--secondary-fontColor);
+    transform: translateX(-120%);
+    opacity: 0;
+    z-index: 100;
+    padding: 10px;
+
+}
+
+.navLink-Mobile{
+    list-style: none;
+    margin: 1rem 0;
+    font-size: 24px;
+    padding: .5em .25em;
+    font-weight: 300;
+}
+
+.navWrapper-Mobile.open{
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .2s ease-in-out;
+    background-color: var(--background-color);
+}
+
+.open{
+    position: fixed;
+    z-index: 101;
+    transition: .5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+}
+/*Nav Button */
+#navBtn{
+    position: absolute;
+    height: 45px;
+    width: 60px;
+    align-self: center;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 1000;
+    top: 15px;
+    right: 25px;
+}
+#navBtn span{
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+    background-color: var(--primary-fontColor);
+}
+#navBtn span:nth-child(1){
+    top: 0px;
+}
+#navBtn span:nth-child(2), #navBtn span:nth-child(3){
+    top: 18px;
+}
+#navBtn span:nth-child(4){
+    top: 36px;
+}
+#navBtn.open span:nth-child(1){
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+#navBtn.open span:nth-child(2){
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#navBtn.open span:nth-child(3){
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#navBtn.open span:nth-child(4){
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.navLink-Mobile a, .checkoutBtn{
+    text-decoration: none;
+    color: var(--secondary-fontColor);
+    position: relative;
+    cursor: pointer;
+}
+
+.navLink-Mobile a::before{
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+width: 0;
+height: 2px;
+background-color: var(--primary-fontColor);
+transition: width 600ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .navLink-Mobile a:hover::before{
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+}
+
+.intro{
+    height: 80vh;
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.staticText{
+    color: var(--background-color);
+}
+
+.dynamic-text{
+    height: 70px;
+    line-height: 90px;
+    overflow: hidden;
+    border-bottom: 2px solid var(--background-color);
+    padding: 0;
+    transform: translateY(-10px);
+}
+
+.dynamic-text li{
+    margin-left: 10px;
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slider 8.5s steps(4) infinite;
+}
+
+/*slide dynamic wrapper*/
+
+@keyframes slider{
+    100% {
+        top: -360px;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/*Hero Section*/
+.heroWrapper{
+    background-image: url(../images/btcc-Bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: -10;
+}
+.heroImg img{
+    max-width: 500px;
+    width: 300px;
+}
+.heroImg{
+    margin: auto;
+}
+.heroMsg{
+    text-align: center;
+    color: var(--primary-fontColor);
+}
+.heroMsg button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.heroMsg h2{
+    margin: 10px 0;
+    line-height: 1.3;
+}
+.heroBackDrop{
+    position: absolute;
+    background-color: rgba(59, 57, 59, 0.39);
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+/*Featured Items*/
+.stacked{
+    display: grid;
+}
+
+.stacked > *{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.featuredItems{
+    color: var(--secondary-fontColor);
+    text-align: center;
+}
+
+.featuredItems h2{
+    padding: 15px;
+}
+.featuredItems-Container, .shopCTA{
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+.itemWrapper{
+    aspect-ratio: 1 / 1.05;
+}
+
+.itemImg{
+    background-image: url(../images/itemBackDrop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.itemImg img{
+width: 100%;
+aspect-ratio: 1 / 1;
+object-fit: contain;
+}
+.itemContent{
+    background-color: var(--background-color);
+    align-self: end;
+    box-shadow:  0 .25rem 1rem rgba(80, 72, 124, 0.1);
+    width: fit-content;
+    justify-self: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.itemContent p, .itemButton{
+    font-weight: 600;
+}
+
+.itemButton{
+    padding: .7rem;
+    margin: 1rem auto;
+    border-bottom: 1px solid var(--deco-secondaryColor);
+    width: 40%;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.itemButton:hover{
+    background-color: var(--deco-secondaryColor);
+    color: var(--background-color);
+}
+
+/*newsletter*/
+.newsletter{
+    text-align: center;
+    border-top: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding: 2rem 0;
+    width: fit-content;
+    margin: auto;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+input, label{
+    border: none;
+    margin: 1rem;
+}
+
+.newsletter button{
+    margin: 1rem;
+    padding: .25rem 2rem;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgb(202, 202, 202);
+}
+
+footer ul li{
+    cursor: pointer;
+    margin: .25rem;
+}
+
+.employeePrivacy{
+    padding: .25rem;
+    margin: 1rem auto;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    width: fit-content;
+}
+.shopCTA{
+    padding: 2rem;
+}
+.ctaImg{
+    justify-self: center;
+}
+.ctaImg img{
+    max-width: 380px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.ctaMessage{
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.ctaButton{
+    padding: 1rem;
+    border-bottom: 1px solid var(--secondary-fontColor);
+    width: fit-content;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.logo{
+    max-width: 120px;
+    width: 110px;
+    height: auto;
+}
+
+.newsletterForm-btn{
+    border: none;
+    background-color: var(--deco-primaryColor);
+    color: var(--background-color);
+    padding: 15px 30px;
+}
+

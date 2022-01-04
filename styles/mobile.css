@@ -1,0 +1,47 @@
+:root{
+    --primary-font: 'Montserrat', sans-serif;
+    --header-font: 'Permanent Marker', cursive;
+    --primary-fontColor: rgb(247, 123, 0);
+    --secondary-fontColor: rgb(15, 15, 15);
+    --deco-primaryColor: rgb(240, 140, 41);
+    --deco-secondaryColor: rgb(102, 101, 101);
+    --background-color: rgb(255,255,255);
+}
+
+@media (min-width: 900px){
+
+    .navContainer-Mobile{
+        display: none;
+    }
+    
+    .navContainer-Desktop{
+        display: block;
+        padding: .5rem .75rem;
+    }
+
+    .navWrapper-Desktop{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    .navLink-Desktop{
+        padding: .25rem .75rem;
+        color: var(--secondary-fontColor);
+        font-weight: 700;
+    }
+
+    .addCart_Btn{
+            width: 100px;
+            height: 25px;
+            font-size: 16px;
+    }
+
+    .ctaImg img{
+        max-width: 400px;
+
+    }
+
+    .productCont{
+        grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    }
+}

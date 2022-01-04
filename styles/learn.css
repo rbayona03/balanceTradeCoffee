@@ -1,0 +1,76 @@
+:root{
+    --primary-font: 'Montserrat', sans-serif;
+    --header-font: 'Permanent Marker', cursive;
+    --primary-fontColor: rgb(247, 123, 0);
+    --secondary-fontColor: rgb(15, 15, 15);
+    --deco-primaryColor: rgb(240, 140, 41);
+    --deco-secondaryColor: rgb(102, 101, 101);
+    --background-color: rgb(255,255,255);
+
+}
+
+.bg-color{
+    width: 100%;
+}
+
+.blurb{
+    text-align: left;
+    margin: 30px auto;
+    width: 334px;
+    max-height: 250px;
+    overflow-y: scroll;
+    padding: 0 40px;
+}
+
+.bl-title{
+   font-size: max(60px, min(17vw, 103px));
+   text-align: center;
+   margin: 30px;
+}
+
+.blurb h2{
+    font-weight: 700
+}
+.blurb p{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.Q-Title{
+    font-size: 28px;
+    text-align: center;
+    margin: 30px;
+}
+.blurb::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+
+.blurb::-webkit-scrollbar
+{
+	width: 5px;
+    border-radius: 15px;
+}
+
+.blurb::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: grey;
+}
+
+.infoHero{
+    display: flex;
+    justify-content: center;
+}
+
+.infoHero img{
+    margin: auto;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}

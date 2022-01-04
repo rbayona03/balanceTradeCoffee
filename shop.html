@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+
+</head>
+<html>
+<body>
+    <div class="scOverlay"></div>
+    <nav class="navContainer-Mobile">
+        <div id="navBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navWrapper-Mobile">
+            <li class="navLink-Mobile"><a href="index.php"><img class="logo" src="./images/BeanLogo1.png" alt="Balance Trade Logo"></a></li>
+            <li class="navLink-Mobile"><a href="index.php">Home</a></li>
+            <li class="navLink-Mobile"><a href="shop.html">Shop</a></li>
+            <li class="navLink-Mobile"><a href="info.html">Learn More</a></li>
+            <li class="navLink-Mobile checkoutBtn">Check out</li>
+        </ul>
+    </nav>
+    <div class="customerCart-Button"><i class="fas fa-shopping-cart" title="Your Cart"></i></div>
+    <div class="shoppingCart">
+        <h1 class="cartTitle">Your Cart</h1>
+        <div class="emptyCart"><h1>Cart is empty!</h1></div>
+        <div class="closeCart">&times;</div>
+    </div>
+    <nav class="navContainer-Desktop">
+        <ul class="navWrapper-Desktop">
+            <li class="navLink-Desktop"><a href="index.php"><img class="logo" src="./images/BeanLogo1.png" alt="Balance Trade Logo"></a></li>
+            <li class="navLink-Desktop"><a href="index.php">Home</a></li>
+            <li class="navLink-Desktop"><a href="shop.html">Shop</a></li>
+            <li class="navLink-Desktop"><a href="info.html">Learn More</a></li>
+        </ul>
+    </nav>
+    <div  class="cartModal" ></div>
+
+
+    <main>
+        <div class="shopheader">
+            <h1 class="shopTitle">The Shop</h1>
+        </div>
+        <section class="productCont">
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_coffee" src="images/BeanBag1.png" alt="Coffee Bag"></div>
+                <div class="p__name p_tag-1"><h1>Yin</h1></div>
+                <div class="p__Des"><p>Yin embodies everything we love about a Light Roast with sweet floral notes.</p></div>
+                    <div class="p__Price">8.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+            </div>
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_coffee" src="images/BeanBag-2.png" alt="Coffee Bag"></div>
+                <div class="p__name"><h1>Yang</h1></div>
+                <div class="p__Des"><p>Yang gives us bold dark flavors provided by our wood fires.</p></div>
+                    <div class="p__Price">8.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+                </div>
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_coffee" src="images/BeanBag3.png" alt="Coffee Bag"></div>
+                <div class="p__name"><h1>Emerald Buddha</h1></div>
+                <div class="p__Des"><p>Harmony is found in the high elevations where these berries are picked. This limited batch shows tells a story of the local forests.</p></div>
+                    <div class="p__Price">10.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+            </div>
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_Merch" src="images/btccMerch-4.png" alt="Mug"></div>
+                <div class="p__name"><h1>Trade Mug</h1></div>
+                <div class="p__Des"><p>Start your day with us in hand</p></div>
+                    <div class="p__Price">12.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+                </div>
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_Merch" src="images/btccMerch-5.png" alt="Thermos"></div>
+                <div class="p__name"><h1>Tumbler</h1></div>
+                <div class="p__Des"><p>On-the-Go We Go</p></div>
+                <div class="p__Price">17.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+            </div>
+            <div class="product">
+                <div class="imageCont" ><img class="pImage pImage_Merch" src="images/btccMerch-6.png" alt="Reusable Pods"></div>
+                <div class="p__name"><h1>The Pour Over</h1></div>
+                <div class="p__Des"><p>Drip Drip Hooray!</p><p>34 oz.</p></div>
+                    <div class="p__Price">19.99</div>
+                    <div class="btn addCart_Btn" data-set="Add">Add to Cart</div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <h2>Connected with us</h2>
+        <ul>
+            <li>Email</li>
+            <li>FaceBook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+        <p class="employeePrivacy">Employee Privacy Policy</p>
+        <h6>&copy; Bayona Web Media 2021; All Rights Reserved</h6>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
