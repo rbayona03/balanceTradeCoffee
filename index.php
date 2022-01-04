@@ -14,8 +14,8 @@
                 $msgClass="danger";
             }else{
                 $to = 'im-roberto@roberto-bayona.com';
-                $subject = 'Newsletter Request From:' . $email;
-                $body = `<h2>Newsletter Request</h2> <h4>Email</h4>` . '<p>'. $email.'</p>'.
+                $subject = 'Newsletter Request From: ' . $email;
+                $body = `<h2>Newsletter Request</h2>` . '<h4>' . 'Email' . '</h4>' . '<p>'. $email.'</p>'.
           
 
                 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -139,14 +139,14 @@
         </section>
         <section class="newsletter">
             <h3>Stay up to date with Balance Trade</h3>
+            <form class="newsletterForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <label  for="email">Enter Your Email:</label>
+                <input class="email" type="text" name="email" id="email"/><br>
+                <button class="newsletterForm-btn" type="submit" name="submit">Enroll Now</button>
+            </form>
             <?php if($msg != ''):?>
             <div class="alert <?php echo $msgClass ?>"><?php echo $msg ?></div>
             <?php endif; ?>
-            <form class="newsletterForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                <label  for="email">Enter Your Email:</label>
-                <input class="email" type="text" name="email" id="email" value="<?php echo isset($_POST['email'])? $email : ''; ?>"/><br>
-                <button class="newsletterForm-btn" type="submit" name="submit">Enroll Now</button>
-            </form>
         </section>
     </main>
     <footer>

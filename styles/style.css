@@ -349,8 +349,13 @@ form{
     flex-wrap: wrap;
 }
 input, label{
-    border: none;
-    margin: 1rem;
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    box-sizing: border-box;
+}
+
+input{
+    border:  2px solid var(--deco-secondaryColor);
 }
 
 .newsletter button{
@@ -417,3 +422,10 @@ footer ul li{
     padding: 15px 30px;
 }
 
+.success{
+    background-color: yellowgreen;
+}
+
+.danger{
+    background-color: orangered;
+}
