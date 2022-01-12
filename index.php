@@ -99,7 +99,7 @@
                 <p>Days aren't as daunting when you put yourself first.
                     With our Fresh brew as your first step you're accomplishing great things.
                 </p>
-                <div class="ctaButton">Check out our latest</div>
+                <div class="ctaButton"><a href="shop.html">Check Out our latest</a></div>
             </div>            
         </section>
         <section class="featuredItems">
@@ -112,7 +112,7 @@
                     <div class="itemContent">
                         <h3>Emerald Buddha</h3>
                         <p>Harmony has found its way to your cup.</p>
-                        <div class="itemButton">Shop Now</div>
+                        <div class="itemButton"><a class="itemButton"href="shop.html">Shop Now</a></div>
                     </div>
                 </div>
                 <div class="itemWrapper stacked">
@@ -122,7 +122,7 @@
                     <div class="itemContent">
                         <h3>Emerald Buddha</h3>
                         <p>A fresh brew is the ultimate wingman.</p>
-                        <div class="itemButton">Shop Now</div>
+                        <div class="itemButton"><a class="itemButton"href="shop.html">Shop Now</a></div>
                     </div>
                 </div>
                 <div class="itemWrapper stacked">
@@ -132,7 +132,7 @@
                     <div class="itemContent">
                         <h3>Emerald Buddha</h3>
                         <p>A blonde roast crafted with <em>Mastery</em></p>
-                        <div class="itemButton">Shop Now</div>
+                        <div class="itemButton"><a class="itemButton"href="shop.html">Shop Now</a></div>
                     </div>
                 </div>
             </div>
